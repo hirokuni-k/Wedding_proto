@@ -24,4 +24,5 @@ Things you may want to cover:
 * ...
 
 
-頑張っていきましょう
+
+
