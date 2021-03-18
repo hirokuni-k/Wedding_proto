@@ -65,7 +65,7 @@ Things you may want to cover:
 
 ### Association
 
-- has_many :selects
+- has_many palanners through: :selects
 - has_many :rooms
 
 <br>
@@ -74,8 +74,8 @@ Things you may want to cover:
 
 | Column     | Type      | Options           |
 | ---------- | --------- | ----------------- |
-| user    | reference | foreign_key: true |
-| planner | reference | foreign_key: true |
+| user    | references | foreign_key: true |
+| planner | references | foreign_key: true |
 
 ### Association
 
