@@ -44,6 +44,7 @@ Things you may want to cover:
 ### Association
 
 - has_many :selects
+- has_many :users, through: :selects
 - has_many :rooms
 
 <br>
@@ -65,7 +66,8 @@ Things you may want to cover:
 
 ### Association
 
-- has_many palanners through: :selects
+- has_many :selects
+- has_many :planners, through: :selects
 - has_many :rooms
 
 <br>
@@ -88,8 +90,8 @@ Things you may want to cover:
 
 | Column     | Type      | Options           |
 | ---------- | --------- | ----------------- |
-| user    | reference | foreign_key: true |
-| planner | reference | foreign_key: true |
+| user    | references | foreign_key: true |
+| planner | references | foreign_key: true |
 
 ### Association
 
@@ -105,7 +107,7 @@ Things you may want to cover:
 | ---------- | --------- | ----------------- |
 | message    | text      | null: false       |
 | whom_id    | integer   | null: false       |
-| room    | reference | foreign_key: true |
+| room    | references | foreign_key: true |
 
 ### Association
 
