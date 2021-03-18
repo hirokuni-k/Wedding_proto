@@ -44,6 +44,7 @@ Things you may want to cover:
 ### Association
 
 - has_many :selects
+- has_many :users, through: :selects
 - has_many :rooms
 
 <br>
@@ -65,7 +66,8 @@ Things you may want to cover:
 
 ### Association
 
-- has_many palanners through: :selects
+- has_many :selects
+- has_many :planners, through: :selects
 - has_many :rooms
 
 <br>
