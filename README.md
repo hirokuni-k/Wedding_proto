@@ -74,8 +74,8 @@ Things you may want to cover:
 
 | Column     | Type      | Options           |
 | ---------- | --------- | ----------------- |
-| user_id    | reference | foreign_key: true |
-| planner_id | reference | foreign_key: true |
+| user    | reference | foreign_key: true |
+| planner | reference | foreign_key: true |
 
 ### Association
 
@@ -88,8 +88,8 @@ Things you may want to cover:
 
 | Column     | Type      | Options           |
 | ---------- | --------- | ----------------- |
-| user_id    | reference | foreign_key: true |
-| planner_id | reference | foreign_key: true |
+| user    | reference | foreign_key: true |
+| planner | reference | foreign_key: true |
 
 ### Association
 
@@ -105,7 +105,7 @@ Things you may want to cover:
 | ---------- | --------- | ----------------- |
 | message    | text      | null: false       |
 | whom_id    | integer   | null: false       |
-| room_id    | reference | foreign_key: true |
+| room    | reference | foreign_key: true |
 
 ### Association
 
