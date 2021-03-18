@@ -107,7 +107,7 @@ Things you may want to cover:
 | ---------- | --------- | ----------------- |
 | message    | text      | null: false       |
 | whom_id    | integer   | null: false       |
-| room    | reference | foreign_key: true |
+| room    | references | foreign_key: true |
 
 ### Association
 
