@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  devise_for :planners
-  devise_for :users
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  devise_for :users, controllers: {
+    sessions: 'users/sessions',
+    passwords: 'users/passwords',
+    registrations: 'users/registrations'  
+  }
+  devise_for :planners, controllers: {
+    sessions: 'planners/sessions',
+    passwords: 'planners/passwords',
+    registrations: 'planners/registrations'
+  }
 end
