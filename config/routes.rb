@@ -9,4 +9,7 @@ Rails.application.routes.draw do
     passwords: 'planners/passwords',
     registrations: 'planners/registrations'
   }
+
+  root to: "weddings#index"
+  resources :weddings
 end
