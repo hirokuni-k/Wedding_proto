@@ -1,28 +1,78 @@
 <div class="top-page">
   <div class="wedding-page">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">岸和田</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link disabled"><%= link_to "ユーザーログイン"%></a>
-          </li>
-        </ul>
+    <div class="contents-base">
+      <div class="wedding-logo text-center">
+        <%= image_tag "logo.png", class: "wedding-content"%>
       </div>
-    </nav>
-    <div class="wedding-logo text-center">
-      <%= image_tag "logo.png", class: "wedding-content"%>
-    </div>
-    <div class="planner-btn text-center">
-      <div class="card-body text-white">
-        <h6 class="card-title">ウェディングのお手伝いをしたい</h6>
-        <div class="planner-rogin">
-          <%= link_to "プランナー様はこちら",class:"no-underline"%>
+      <div class="album">
+        <%= image_tag "wedding-4.jpeg", class: "img1"%>
+        <%= image_tag "wedding-5.jpeg", class: "img2"%>
+        <%= image_tag "wedding-6.jpeg", class: "img3"%>
+        <%= image_tag "wedding-7.jpeg", class: "img4"%>
+      </div>
+      <div class="center-text text-center mt-5">
+        <p>もっと自由な挙式を</p>
+        <br>
+        <p>あなたとプランナーで作る</p>
+        <br>
+        <p>あなただけの結婚式</p>
+      </div>
+      <div class="user-rogin text-center d-flex justify-content-center">
+        <div class="rogin-btn">
+          <%= link_to "ログインはこちら", user_session_path %>
+        </div>
+        <div class="signup-btn">
+          <%= link_to "初めての方はこちら", new_user_registration_path %>
         </div>
       </div>
-    <div>
+      <div class="wedding-point">
+      <hr>
+        <div class="point">
+          <%= image_tag "wedding-8.webp"%>
+          <div class="point-text">
+            料理にはこだわりたい
+          </div>
+        </div>
+      <hr>
+        <div class="point">
+          <%= image_tag "wedding-9.jpeg"%>
+          <div class="point-text">
+            高価でありきたりなオプションはいらない
+          </div>
+        </div>
+      <hr>
+        <div class="point">
+          <%= image_tag "wedding-10.jpeg"%>
+          <div class="point-text">
+            挙式のクオリティは絶対に落とせない
+          </div>
+        </div>
+      <hr>
+        <div class="point">
+          <%= image_tag "wedding-11.jpeg"%>
+          <div class="point-text">
+            私らしいオンリーワンな挙式
+          </div>
+        </div>
+      <hr>
+      </div>
+      <div class="wedding-concept">
+        <div class="concept">
+          <p>岸和田ウェディングでは</p>
+          <p>従来の結婚式場に任せる</p>
+          <p>ようなスタイルではなく</p>
+          <p>フリーランスプランナーとあなたとで</p>
+          <p>挙式を細部まで思いのままに</p>
+          <P>コーディングすることができます</P>
+          <p>結婚式場のルールもなく</p>
+          <p>低コストであなただけの</p>
+          <p>理想のウェディングを</p>
+      </div>
+      <div class="planner-btn text-center">
+        <div class="btn-square-soft">
+          <%= link_to "プランナー様はこちら", new_planner_registration_path%>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
