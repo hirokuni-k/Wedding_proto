@@ -1,3 +1,237 @@
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+JP');
+
+.top-page {
+     width: 100%;
+     height: 100%;
+}
+
+.bar-header {
+     height: 100px;
+}
+
+.contents-base {
+     height: 100%;
+     width: 80%;
+     background-color: white;
+     margin: 0 auto;
+     margin-bottom: 30px;
+}
+
+.wedding-page {
+     background-image: image-url('wedding-3.png');
+     background-color: rgb(249, 209, 216);
+     height: 100%;
+}
+
+.planner-btn {
+     position: fixed;
+     bottom: 10px; 
+     right: 10px;
+     border-radius:5px;
+}
+
+.btn-square-soft {
+     display: inline-block;
+     position: relative;
+     text-decoration: none;
+     height: 150px;
+     width: 200px;
+     line-height: 50px;
+     border-radius: 5px;
+     text-align: center;
+     overflow: hidden;
+     font-weight: bold;
+     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
+     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.28);
+     a:link {color:white; text-decoration:none }
+     a:visited { color:white; text-decoration:none }
+     a:active { color:white; text-decoration:none }
+     background-image: image-url('logo-planner.png');
+     background-size: cover;
+}
+   
+.btn-square-soft:active {
+     /*押したとき*/
+     -webkit-transform: translateY(2px);
+     transform: translateY(2px);/*沈むように*/
+     box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+}
+
+.user-rogin {
+     font-size: 20px;
+}
+
+.wedding-content {
+     width: 500px;
+}
+
+.album {
+	margin: auto;
+	background-color: white;
+	position: relative;
+}
+
+.album img {
+	width: 80%;
+	animation-name: album;
+	-webkit-animation-name: album;
+	animation-duration: 15s;
+	-webkit-animation-duration: 15s;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	opacity: 0;
+}
+
+.album .img1 {
+	display: block;
+	margin: 0 auto;
+}
+
+.album .img2 {
+	animation-delay:5s;
+	-webkit-animation-delay:5s;
+	position: absolute;
+	top: 0;
+     left: 10%;
+}
+
+.album .img3 {
+	animation-delay:10s;
+	-webkit-animation-delay:10s;
+	position: absolute;
+	top: 0;
+     left: 10%;
+}
+
+.album .img4 {
+	animation-delay:15s;
+	-webkit-animation-delay:15s;
+	position: absolute;
+	top: 0;
+     left: 10%;
+}
+
+@keyframes album {
+	0% {
+		opacity: 0;
+	}
+	
+	12.5% {
+		opacity: 1;
+	}
+
+	37.5% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes album {
+	0% {
+		opacity: 0;
+	}
+	
+	12.5% {
+		opacity: 1;
+	}
+
+	37.5% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+}
+
+.center-text {
+     width: 50%;
+     padding: 40px;
+     margin: 0 auto;
+     font-size: 25px;
+     font-family: 'Noto Serif JP', sans-serif;
+}
+
+.wedding-point {
+     width: 100%;
+     padding: 20px;
+     margin: 0 auto;
+}
+
+.point {
+     width: 100%;
+     font-size: 25px;
+     display: flex;
+}
+
+.point img {
+     width: 300px;
+     height: 250px;
+     padding: 20px;
+}
+
+.point-text {
+     margin-top: 50px;
+     padding-left: 100px;
+     font-family: 'Noto Serif JP', sans-serif;
+     color: rgb(73, 65, 65);
+}
+
+.user-rogin {
+     
+}
+
+.rogin-btn {
+     background-color: rgb(254, 196, 173);
+     color: white;
+     padding: 30px;
+     margin-right: 20px;
+     border-radius:5px;
+     font-family: 'Noto Serif JP', sans-serif;
+     a:link {color:white; text-decoration:none }
+     a:visited { color:white; text-decoration:none }
+     a:active { color:pink; text-decoration:none }
+}
+
+.rogin-btn:hover{
+     color: #000; /* 文字色を白にする */
+     background-color: #f48484; /* 背景色をグレー（#c9c9c9）にする */
+     text-decoration: none; /* リンクに出てくる下線を無効にする*/  
+}
+
+.signup-btn {
+     background-color: rgb(126, 249, 159);
+     color: white;
+     padding: 30px;
+     margin-left: 20px;
+     border-radius:5px;
+     font-family: 'Noto Serif JP', sans-serif;
+     a:link {color:white; text-decoration:none }
+     a:visited { color:white; text-decoration:none }
+     a:active { color:rgb(126, 249, 159); text-decoration:none }
+}
+
+.signup-btn:hover{
+     color: #000; /* 文字色を白にする */
+     background-color: #0ef925; /* 背景色をグレー（#c9c9c9）にする */
+     text-decoration: none; /* リンクに出てくる下線を無効にする*/  
+}
+
+.wedding-concept {
+     width: 100%;
+     height: 500px;
+     background-image: image-url('wedding-13.jpeg');
+     background-size: cover;
+}
+
+.concept {
+     font-family: 'Noto Serif JP', sans-serif;
+     font-size: 20px;
+     padding: 30px;
+     color: rgb(68, 62, 62);
+}
 // Place all the styles related to the weddings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
