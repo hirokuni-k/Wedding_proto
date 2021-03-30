@@ -29,29 +29,36 @@
 }
 
 .message-2 {
-     animation-delay: 1s;
+     animation-delay: 0.5s;
 }
 
 .message-3 {
-     animation-delay: 2s;
+     animation-delay: 1s;
 }
 
-.render-link {
-     animation-delay: 3s;
+.render-login-link {
+     animation-delay: 0.5s;
+     color: rgb(85, 74, 74);
+     font-size: 22px;
 }
 
+.render-login-link:hover {
+     color: rgb(253, 244, 233);
+     text-decoration: none;
+     
+}
 
 .planner-form {
      width: 400px;
      height: 100%;
      background-image: url('wedding-20.jpeg');
      padding: 15px;
-     animation-delay: 3.5s;
+     animation-delay: 1.5s;
 }
 
 .input-form {
      font-size: 15px;
-     animation-delay: 4s;
+     animation-delay: 1.7s;
 }
 
 .form {
@@ -94,7 +101,7 @@
 }
 
 .submit-btn:hover{
-     transform: scale(2, 2);
+     transform: scale(1.3, 1.3);
 }
 
 .birth-form {
@@ -107,4 +114,15 @@
 
 .p-day {
      margin: auto 0;
+}
+
+.password-form {
+     border-top: none;
+     border-left: none;
+     border-right: none;
+     border-collapse: collapse;
+     background-color:transparent;
+     padding: 15px 15px 5px 15px;
+     width: 220px;
+     font-size: 18px;
 }
