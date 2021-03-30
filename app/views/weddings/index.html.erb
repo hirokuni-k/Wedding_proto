@@ -18,12 +18,12 @@
         <p>あなただけの結婚式</p>
       </div>
       <div class="user-rogin text-center d-flex justify-content-center">
-        <div class="rogin-btn">
-          <%= link_to "ログインはこちら", user_session_path %>
-        </div>
-        <div class="signup-btn">
-          <%= link_to "初めての方はこちら", new_user_registration_path %>
-        </div>
+        <%= link_to(user_session_path, class: "rogin-btn ml-5 mr-5") do %>
+          <span> ログインはこちら </span>
+        <% end %>
+        <%= link_to(new_user_registration_path, class: "signup-btn ml-5") do %>
+          <span> 初めての方はこちら </span>
+        <% end %>
       </div>
       <div class="wedding-point">
       <hr>
@@ -70,7 +70,7 @@
       </div>
       <div class="planner-btn text-center">
         <div class="btn-square-soft">
-          <%= link_to "プランナー様はこちら", new_planner_registration_path%>
+          <%= link_to "プランナー様はこちら", new_planner_registration_path %>
         </div>
       </div>
     </div>
