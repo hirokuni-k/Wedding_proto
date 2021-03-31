@@ -61,6 +61,17 @@
      animation-delay: 1.7s;
 }
 
+.render-link {
+     animation-delay: 1.7s;
+     color: rgb(85, 74, 74);
+     font-size: 15px;
+}
+
+.render-link:hover {
+     color: rgb(253, 244, 233);
+     text-decoration: none;
+}
+
 .form {
      border-top: none;
      border-left: none;
