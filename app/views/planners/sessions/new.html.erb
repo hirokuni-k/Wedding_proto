@@ -1,26 +1,28 @@
-<h2>Log in</h2>
+<div class="planner-page">
+  <div class="planner-main text-center">
+    <h2 class="fadein message-1 mb-5 mt-5">ようこそプランナー様</h2>
+    <h4 class="fadein message-2 mt-4 mb-2">登録したアカウントのメールアドレスと</h4>
+    <h4 class="fadein message-3 mb-2">パスワードを入力してください</h4>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="fadein planner-form text-center">
+      <h5 class="mt-5">メールアドレス<h5>
+      <div class="fadein input-form">
+        <%= f.email_field :email, class:"password-form", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
+      </div>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+      <h5 class="mt-5">パスワード</h5>
+      <div class="fadein input-form mb-3">
+        <%= f.password_field :password, class:"password-form", id:"password", placeholder:"8文字以上の半角英数字" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <div class="actions mt-5 mb-3">
+        <%= f.submit "ログイン", class: "submit-btn" %>
+      </div>
     </div>
   <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
+  <div class="planner-links">
+    <%= link_to "新規登録はこちら", new_registration_path(resource_name), class: "render-link" %><br />
+    <%= link_to "パスワードを忘れた方はこちら", new_password_path(resource_name), class: "render-link" %>
   </div>
-<% end %>
-
-<%= render "planners/shared/links" %>
+  </div>
+</div>
