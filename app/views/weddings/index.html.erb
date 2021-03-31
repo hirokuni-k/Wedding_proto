@@ -1,4 +1,9 @@
 <div class="top-page">
+<% if planner_signed_in? %>
+  <nav class="navbar navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1"><%= link_to "ログアウト", destroy_planner_session_path, method: :delete %></span>
+  </nav>
+<% end %>
   <div class="wedding-page">
     <div class="contents-base">
       <div class="wedding-logo text-center">
@@ -68,11 +73,13 @@
           <p>低コストであなただけの</p>
           <p>理想のウェディングを</p>
       </div>
+    <% unless planner_signed_in? %>
       <div class="planner-btn text-center">
         <div class="btn-square-soft">
           <%= link_to "プランナー様はこちら", new_planner_registration_path %>
         </div>
       </div>
+    <% end %>
     </div>
   </div>
 </div>
