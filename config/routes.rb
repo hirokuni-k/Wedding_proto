@@ -12,4 +12,5 @@ Rails.application.routes.draw do
 
   root to: "weddings#index"
   resources :weddings
+  resources :planner_mypages
 end
