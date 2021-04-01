@@ -1,6 +1,6 @@
 .planner-mypage {
      width: 100%;
-     height: 1000px;
+     height: 1290px;
      font-family: 'M+ Type-1 (general-j) Regular';
 }
 
@@ -16,7 +16,7 @@
 
 .planner-contents {
      width: 100%;
-     height: 1000px;
+     height: 100%;
      display: flex;
 }
 
@@ -58,11 +58,11 @@
 }
 
 .content-body {
-     width: 300px;
+     width: 30%;
      height: 350px;
      border: solid 1px rgba(120, 112, 106, 0.19);
      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
-     margin: 10px;
+     margin: 10px auto;
 }
 
 .planner-user-info {
@@ -77,4 +77,36 @@
 .main-title {
      padding: 40px 0;
      border-bottom: solid 1px rgba(120, 112, 106, 0.19);
+}
+
+
+// ビューポート
+
+//タブレット
+@media (max-width: 1024px) {
+     .mypage-side {
+       width: 20%;
+       margin: 0 auto;
+     }
+     .mypage-header {
+       font-size: 24px;
+     }
+     .content-body {
+       width: 30%;
+       margin-bottom: 40px;
+     }
+}
+//スマホ
+@media (max-width: 599px) {
+     .mypage-side {
+          width: 30%;
+          margin: 0 auto;
+        }
+        .mypage-header {
+          font-size: 24px;
+        }
+        .content-body {
+          width: 90%;
+          margin-bottom: 40px;
+        }
 }
