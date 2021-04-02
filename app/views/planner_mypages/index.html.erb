@@ -9,25 +9,25 @@
           <%= image_tag "logo.jpg", class: "photo"%>
         </div>
         <div class="account-name">
-        アカウント名
+          <%= @planner.nickname%>
         </div>
       </div>
       <div class="mypage-list">
         <h5><%= link_to "登録ユーザー一覧"%></h5>
       </div>
       <div class="mypage-list">
-        <h5><%= link_to "アカウント情報"%></h5>
+        <h5><%= link_to "アカウント情報", planner_mypage_path(current_planner)%></h5>
       </div>
       <div class="mypage-list">
         <h5><%= link_to "プロフィール情報"%></h5>
       </div>
       <div class="mypage-list">
-        <h5><%= link_to "ログアウト"%></h5>
+        <h5><%= link_to "ログアウト", destroy_planner_session_path, method: :delete%></h5>
       </div>
     </div>
     <div class="mypage-main">
       <div class="main-title text-center">
-        <h3>ようこそプランナー様</h3>
+        <h3>ようこそ<%= @planner.nickname%>様</h3>
       </div>
       <div class="main-content">        
         <div class="content-body">
