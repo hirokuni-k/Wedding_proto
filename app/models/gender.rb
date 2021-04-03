@@ -9,5 +9,4 @@ class Gender < ActiveHash::Base
 
 include ActiveHash::Associations
 has_many :users
-has_many :planners
 end
