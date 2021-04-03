@@ -5,7 +5,7 @@
     <h4 class="fadein message-2 mt-4 mb-2">登録項目に情報を入力してください</h4>
     <h6 class="fadein message-3 mb-2">※項目は全て入力必須です</h6>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-      <%= render "planners/shared/error_messages", resource: resource %>
+      <%= render "users/shared/error_messages", resource: resource %>
       <div class="fadein user-form text-center">
         <h5 class=" mt-5">アカウント名</h5>
         <div class="name-form">
