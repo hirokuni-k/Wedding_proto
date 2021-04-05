@@ -33,6 +33,10 @@ ActiveRecord::Schema.define(version: 2021_04_03_132928) do
     t.integer "gender_id", null: false
     t.date "birth_date", null: false
     t.integer "prefecture_id", null: false
+    t.text "bridal", null: false
+    t.text "history", null: false
+    t.text "specialty", null: false
+    t.text "favorite", null: false
     t.bigint "planner_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
