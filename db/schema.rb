@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2021_04_03_132928) do
     t.text "history", null: false
     t.text "specialty", null: false
     t.text "favorite", null: false
+    t.text "word", null: false
     t.bigint "planner_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

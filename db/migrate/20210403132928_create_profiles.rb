@@ -12,6 +12,7 @@ class CreateProfiles < ActiveRecord::Migration[6.0]
       t.text :history, null: false
       t.text :specialty, null: false
       t.text :favorite, null: false
+      t.text :word, null: false
       t.references :planner, null: false, foreign_key: true
       t.timestamps
     end
