@@ -1,6 +1,6 @@
 .planner-mypage {
      width: 100%;
-     height: 1290px;
+     height: 100%;
      font-family: 'M+ Type-1 (general-j) Regular';
 }
 
@@ -24,7 +24,6 @@
      width: 300px;
      height: 100%;
      float: left;
-     border: solid 2px rgba(120, 112, 106, 0.19);
      border-top: none;
      display: flex;
      flex-flow: column;
@@ -48,6 +47,8 @@
 
 .mypage-main {
      width: 100%;
+     height: 100%;
+     border-left: solid 2px rgba(120, 112, 106, 0.19);
 }
 
 .main-content {
