@@ -10,4 +10,5 @@ class Planner < ApplicationRecord
  
   validates :nickname, presence: true
   
+  has_one :profile
 end
