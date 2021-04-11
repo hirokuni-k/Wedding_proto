@@ -1,16 +1,16 @@
 <div class="top-page">
-<% if planner_signed_in? %>
-  <nav class="navbar navbar-light bg-light">
-    <span class="navbar-brand mb-0 h1"><%= link_to "ログアウト", destroy_planner_session_path, method: :delete %></span>
-  </nav>
-<% end %>
+  <% if planner_signed_in? %>
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1"><%= link_to "ログアウト", destroy_planner_session_path, method: :delete %></span>
+    </nav>
+  <% end %>
   <div class="wedding-page">
     <div class="contents-base">
       <div class="wedding-flame text-center">
-        <%= image_tag "f1481_0.png", class: "wedding-flame"%>
+        <%= image_tag "f0334_1.png", class: "wedding-flame"%>
         <div class=wedding-content>
-         <%= image_tag "logo2.png", class: "wedding-content"%>
-       </div>
+          <%= image_tag "logo2.png", class: "wedding-content"%>
+        </div>
       </div>
       <div class="album">
         <%= image_tag "wedding-4.jpeg", class: "img1"%>
@@ -34,35 +34,35 @@
         <% end %>
       </div>
       <div class="wedding-point">
-      <hr>
+        <hr>
         <div class="point">
           <%= image_tag "wedding-8.webp"%>
           <div class="point-text">
             料理にはこだわりたい
           </div>
         </div>
-      <hr>
+        <hr>
         <div class="point">
           <%= image_tag "wedding-9.jpeg"%>
           <div class="point-text">
             高価でありきたりなオプションはいらない
           </div>
         </div>
-      <hr>
+        <hr>
         <div class="point">
           <%= image_tag "wedding-10.jpeg"%>
           <div class="point-text">
             挙式のクオリティは絶対に落とせない
           </div>
         </div>
-      <hr>
+        <hr>
         <div class="point">
           <%= image_tag "wedding-11.jpeg"%>
           <div class="point-text">
             私らしいオンリーワンな挙式
           </div>
         </div>
-      <hr>
+        <hr>
       </div>
       <div class="wedding-concept">
         <div class="concept">
@@ -75,14 +75,18 @@
           <p>結婚式場のルールもなく</p>
           <p>低コストであなただけの</p>
           <p>理想のウェディングを</p>
-      </div>
-    <% unless planner_signed_in? %>
-      <div class="planner-btn text-center">
-        <div class="btn-square-soft">
-          <%= link_to "プランナー様はこちら", new_planner_registration_path %>
         </div>
+        <% unless planner_signed_in? %>
+          <div class="planner-btn text-center">
+            <div class="btn-square-soft">
+              <%= link_to "プランナー様はこちら", new_planner_registration_path %>
+            </div>
+          </div>
+        <% end %>
       </div>
-    <% end %>
     </div>
   </div>
-</div>
+  <body>
+    <%= yield %>
+    <%= render 'shared/footer' %>
+  </body>
