@@ -308,6 +308,19 @@
   padding: 30px;
   color: rgb(68, 62, 62);
 }
+
+.footer {
+  background: hsl(270, 7%, 71%);
+  color: white;
+  height: 90px;
+  margin-top: -50px;
+}
+
+.container {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
 // Place all the styles related to the weddings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
