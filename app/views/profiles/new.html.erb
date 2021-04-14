@@ -3,7 +3,7 @@
     プロフィール作成ページ
   </div>
   <%= form_with model: @profile, local: true do |f| %>
-    <%= f.file_field :images, class: "image-profile", name: 'profile[images][]', id: "profile_image" %>
+    <%= f.file_field :images, class: "image-profile", id: "profile_image" %>
     <div id="image-list"></div>
     <%= f.text_field :last_name, class: "last-name-profile", placeholder: "姓"%>
     <%= f.text_field :first_name, class: "first-name-profile", placeholder: "名"%>
