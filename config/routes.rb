@@ -12,6 +12,6 @@ Rails.application.routes.draw do
 
   root to: "weddings#index"
   resources :weddings
-  resources :planner_mypages
+  resources :planners, except: :index
   resources :profiles
 end
