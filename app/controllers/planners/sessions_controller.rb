@@ -21,7 +21,7 @@ class Planners::SessionsController < Devise::SessionsController
   # protected
 
   def after_sign_in_path_for(resource)
-    planner_mypages_path
+    planner_path(resource)
   end 
   #ログアウト後のリダイレクト先
   def after_sign_out_path_for(resource)
