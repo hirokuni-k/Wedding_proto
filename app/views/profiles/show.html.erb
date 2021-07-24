@@ -1,145 +1,145 @@
 <div class="planner-mypage">
-     <div class="mypage-header">
-          <h2 class="mypage-text">マ イ ペ ー ジ</h2>
-     </div>
-     <div class="planner-contents">
-          <div class=mypage-side>
-               <div class="planner-info">
-                    <div class="planner-photo">
-                         <%= image_tag "logo.jpg", class: "photo"%>
-                    </div>
-                    <div class="account-name">
-                         アカウント名
-                    </div>
-               </div>
-               <div class="mypage-list">
-                    <h5><%= link_to "登録ユーザー一覧"%></h5>
-               </div>
-               <div class="mypage-list">
-                    <h5><%= link_to "アカウント情報", planner_mypage_path(current_planner)%></h5>
-               </div>
-               <div class="mypage-list">
-                    <h5><%= link_to "プロフィール情報", profile_path(current_planner)%></h5>
-               </div>
-               <div class="mypage-list">
-                    <h5><%= link_to "マイページトップ", planner_mypages_path%></h5>
-               </div>
-               <div class="mypage-list">
-                    <h5><%= link_to "ログアウト"%></h5>
-               </div>
+  <div class="mypage-header">
+    <h2 class="mypage-text">マ イ ペ ー ジ</h2>
+  </div>
+
+  <div class="planner-contents">
+    <div class=mypage-side>
+      <div class="planner-info">
+        <div class="planner-photo">
+          <%= image_tag "logo.jpg", class: "photo"%>
+        </div>
+        <div class="account-name">
+          アカウント名
+        </div>
+      </div>
+
+      <div class="mypage-list">
+        <h5><%= link_to "登録ユーザー一覧"%></h5>
+      </div>
+      <div class="mypage-list">
+        <h5><%= link_to "アカウント情報", planner_path(@planner)%></h5>
+      </div>
+      <div class="mypage-list">
+        <h5><%= link_to "プロフィール情報", planner_profiles_path(@planner)%></h5>
+      </div>
+      <div class="mypage-list">
+        <h5><%= link_to "マイページトップ", planner_path(current_planner)%></h5>
+      </div>
+      <div class="mypage-list">
+        <h5><%= link_to "ログアウト"%></h5>
+      </div>
+    </div>
+
+    <div class="mypage-main">
+      <div class="main-title text-center">
+        <h3>プロフィール情報ページ</h3>
+      </div>
+
+      <div class="profile-page">
+        <div class="profile-back-image">
+          <%= image_tag "profile.jpeg", class: "back-image"%>
+          <div class="profile-top">
+            <%= image_tag "profile-2.jpeg", class:"profile-image"%>
           </div>
-          <div class="mypage-main">
-               <div class="main-title text-center">
-                    <h3>プロフィール情報ページ</h3>
-               </div>
-               <div class="profile-page">
-                    <div class="profile-back-image">
-                         <%= image_tag "profile.jpeg", class: "back-image"%>
-                         <div class="profile-top">
-                              <%= image_tag "profile-2.jpeg", class:"profile-image"%>
-                         </div>
-                    </div>
-               </div>
-               <div class="profile-info">
-                    <div class="profile-name">
-                         <div class="last-name-group text-center">
-                              <div class="profile-last-name-kana">
-                                   シンノ
-                              </div>
-                              <div class="profile-last-name">
-                                   信野
-                              </div>
-                         </div>
-                         <div class="first-name-group text-center">
-                              <div class="profile-first-name-kana">
-                                   タケヒロ
-                              </div>
-                              <div class="profile-first-name">
-                                   岳宏
-                              </div>
-                         </div>
-                    </div>
-                    <div class="profile-categry mt-2">
-                         <div class="profile-gender">
-                              男性
-                         </div>
-                         <div class="profile-birth-date">
-                              30歳
-                         </div>
-                         <div class="profile-prefecture">
-                              大阪府在住
-                         </div>
-                    </div>
-               </div>
-               <div class="profile-main">
-                    <div class="profile-title">
-                         <h3>プロフィール</h3>
-                    </div>
-                    <div class="profile-message">
-                         初めまして！
-                         AILEd'ANGE gardenでプランナーをしております。<br/>
-                         この度はご結婚誠におめでとうございます。<br/>
-                         <br>
-                         お二人の理想の結婚式はどんなものでしょうか？<br/>
-                         どんな１日にしたいでしょうか？<br/>
-                         どんな想いを込めた１日にしましょうか？<br/>
-                         <br>
-                         是非、お二人の話しをお聞かせください♡！<br/>
-                         ご結婚式当日はもちろん、<br/>
-                         結婚式準備も楽しく進めさせて頂きます。<br/>
-                         <br>
-                         お二人にしか創ることの出来ない１日を、<br/>
-                         一緒に創っていきましょう♡！<br/>
-                    </div>
-                    <div class="profile-contents">
-                         <div class="profile-title">
-                              <h3>プランナーチェックシート</h3>
-                         </div>
-                         <div class="profile-lists">
-                              <ul class="question-lists">
-                                   <li class="question-list">
-                                        自分が思う結婚式とは？
-                                   </li>
-                                   <li class="question-list">
-                                        この仕事の好きなところ
-                                   </li>
-                                   <li class="question-list">
-                                        プランナー歴
-                                   </li>
-                                   <li class="question-list">
-                                        得意なテイスト
-                                   </li>
-                              </ul>
-                              <ul class="answer-lists">
-                                   <li class="answer-list">
-                                        答え
-                                   </li>
-                                   <li class="answer-list">
-                                        答え
-                                   </li>
-                                   <li class="answer-list">
-                                        答え
-                                   </li>
-                                   <li class="answer-list">
-                                        答え
-                                   </li>
-                              </ul>
-                         </div>
-                    </div>
-               </div>
+        </div>
+      </div>
+      <div class="profile-info">
+        <div class="profile-name">
+          <div class="last-name-group text-center">
+            <div class="profile-last-name-kana">
+              <%= @profile.last_name_kana %>
+              <%=  %>
+            </div>
+            <div class="profile-last-name">
+              <%= @profile.last_name %>
+            </div>
           </div>
-          <% if @planner_profile.present? %>
-          <div class="planner-btn text-center">
-               <div class="btn-square-soft">
-                    <%= link_to "プロフィールを編集する" %>
-               </div>
+          <div class="first-name-group text-center">
+            <div class="profile-first-name-kana">
+              <%= @profile.first_name_kana %>
+            </div>
+            <div class="profile-first-name">
+              <%= @profile.first_name %>
+            </div>
           </div>
-          <% else %>
-          <div class="planner-btn text-center">
-               <div class="btn-square-soft">
-                    <%= link_to "プロフィールを作成する", new_profile_path %>
-               </div>
+        </div>
+          <div class="profile-categry mt-2">
+            <div class="profile-gender">
+              <%= @profile.gender.name %>
+            </div>
+            <div class="profile-birth-date">
+              <%= @profile.age %>歳
+            </div>
+            <div class="profile-prefecture">
+              <%= @profile.prefecture.name %>在住
+            </div>
           </div>
-          <% end %>
-     </div>
+      </div>
+      <div class="profile-main">
+        <div class="profile-title">
+          <h3>プロフィール</h3>
+        </div>
+        <div class="profile-message">
+          初めまして！
+          AILEd'ANGE gardenでプランナーをしております。<br/>
+          この度はご結婚誠におめでとうございます。<br/>
+          <br>
+          お二人の理想の結婚式はどんなものでしょうか？<br/>
+          どんな１日にしたいでしょうか？<br/>
+          どんな想いを込めた１日にしましょうか？<br/>
+          <br>
+          是非、お二人の話しをお聞かせください♡！<br/>
+          ご結婚式当日はもちろん、<br/>
+          結婚式準備も楽しく進めさせて頂きます。<br/>
+          <br>
+          お二人にしか創ることの出来ない１日を、<br/>
+          一緒に創っていきましょう♡！<br/>
+        </div>
+          <div class="profile-contents">
+            <div class="profile-title">
+              <h3>プランナーチェックシート</h3>
+            </div>
+            <div class="profile-lists">
+              <ul class="question-lists">
+                <li class="question-list">
+                  自分が思う結婚式とは？
+                </li>
+                <li class="question-list">
+                  この仕事の好きなところ
+                </li>
+                <li class="question-list">
+                  プランナー歴
+                </li>
+                <li class="question-list">
+                  得意なテイスト
+                </li>
+              </ul>
+              <ul class="answer-lists">
+                <li class="answer-list">
+                  答え
+                </li>
+                <li class="answer-list">
+                  答え
+                </li>
+                <li class="answer-list">
+                  答え
+                </li>
+                <li class="answer-list">
+                  答え
+                </li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <% if current_planner == @planner %>
+      <div class="planner-btn text-center">
+        <div class="btn-square-soft">
+          <%= link_to "プロフィールを編集する" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

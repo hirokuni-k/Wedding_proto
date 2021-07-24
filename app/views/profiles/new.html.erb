@@ -2,13 +2,13 @@
   <div class="new-title">
     プロフィール作成ページ
   </div>
-  <%= form_with model: @profile, local: true do |f| %>
+  <%= form_with model: [@planner, @profile], local: true do |f| %>
     <%= f.file_field :images, class: "image-profile", name: 'profile[images][]', id: "profile_image" %>
     <div id="image-list"></div>
     <%= f.text_field :last_name, class: "last-name-profile", placeholder: "姓"%>
     <%= f.text_field :first_name, class: "first-name-profile", placeholder: "名"%>
-    <%= f.text_field :last_name_kana, class: "profile-name-kana", placeholder: "姓　フリガナ"%>
-    <%= f.text_field :first_name_kana, class: "profile-name-kana", placeholder: "名　フリガナ"%>
+    <%= f.text_field :last_name_kana, class: "profile-name-kana", placeholder: "姓 フリガナ"%>
+    <%= f.text_field :first_name_kana, class: "profile-name-kana", placeholder: "名 フリガナ"%>
     <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"gender-select", id:"gender"}) %>
     <%= raw sprintf(( 
               f.date_select :birth_date, 

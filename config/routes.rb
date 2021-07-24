@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     passwords: 'users/passwords',
-    registrations: 'users/registrations'  
+    registrations: 'users/registrations'
   }
   devise_for :planners, controllers: {
     sessions: 'planners/sessions',
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   root to: "weddings#index"
   resources :weddings
-  resources :planner_mypages
-  resources :profiles
+  resources :planners, except: :index do
+    resource :profiles
+  end
 end
