@@ -18,13 +18,13 @@
         <h5><%= link_to "登録ユーザー一覧"%></h5>
       </div>
       <div class="mypage-list">
-        <h5><%= link_to "アカウント情報", planner_mypage_path(current_planner)%></h5>
+        <h5><%= link_to "アカウント情報", planner_path(@planner)%></h5>
       </div>
       <div class="mypage-list">
-        <h5><%= link_to "プロフィール情報", profile_path(current_planner)%></h5>
+        <h5><%= link_to "プロフィール情報", planner_profiles_path(@planner)%></h5>
       </div>
       <div class="mypage-list">
-        <h5><%= link_to "マイページトップ", planner_mypages_path%></h5>
+        <h5><%= link_to "マイページトップ", planner_path(current_planner)%></h5>
       </div>
       <div class="mypage-list">
         <h5><%= link_to "ログアウト"%></h5>
@@ -48,30 +48,31 @@
         <div class="profile-name">
           <div class="last-name-group text-center">
             <div class="profile-last-name-kana">
-              シンノ
+              <%= @profile.last_name_kana %>
+              <%=  %>
             </div>
             <div class="profile-last-name">
-              信野
+              <%= @profile.last_name %>
             </div>
           </div>
           <div class="first-name-group text-center">
             <div class="profile-first-name-kana">
-              タケヒロ
+              <%= @profile.first_name_kana %>
             </div>
             <div class="profile-first-name">
-              岳宏
+              <%= @profile.first_name %>
             </div>
           </div>
         </div>
           <div class="profile-categry mt-2">
             <div class="profile-gender">
-              男性
+              <%= @profile.gender.name %>
             </div>
             <div class="profile-birth-date">
-              30歳
+              <%= @profile.age %>歳
             </div>
             <div class="profile-prefecture">
-              大阪府在住
+              <%= @profile.prefecture.name %>在住
             </div>
           </div>
       </div>
@@ -133,16 +134,10 @@
       </div>
     </div>
 
-    <% if @planner_profile.present? %>
+    <% if current_planner == @planner %>
       <div class="planner-btn text-center">
         <div class="btn-square-soft">
           <%= link_to "プロフィールを編集する" %>
-        </div>
-      </div>
-    <% else %>
-      <div class="planner-btn text-center">
-        <div class="btn-square-soft">
-          <%= link_to "プロフィールを作成する", new_profile_path %>
         </div>
       </div>
     <% end %>
