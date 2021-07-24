@@ -1,4 +1,5 @@
 class ProfilesController < ApplicationController
+  before_action :authenticate_planner!, except: :show
 
   def new
     @planner = current_planner
@@ -8,7 +9,7 @@ class ProfilesController < ApplicationController
   def create
     profile = Profile.new(profile_params.merge(planner_id: current_planner.id))
     if profile.save
-      redirect_to profile_path(current_planner)
+      redirect_to profiles_path(current_planner)
     else
       render 'new'
     end
