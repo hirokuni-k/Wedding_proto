@@ -6,8 +6,7 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    binding.pry
-    profile = current_planner.build_profile(profile_params)
+    profile = Profile.new(profile_params.merge(planner_id: current_planner.id))
     if profile.save
       redirect_to profile_path(current_planner)
     else
@@ -24,7 +23,7 @@ class ProfilesController < ApplicationController
   private
 
   def profile_params
-    params.require(:profile).permit(
+    params.permit(
       :last_name, :first_name, :last_name_kana, :first_name_kana, 
       :gender_id, :prefecture_id, :birth_date, :bridal, :specialty, 
       :history, :favorite, :word, :image

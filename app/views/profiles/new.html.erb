@@ -2,7 +2,7 @@
   <div class="new-title">
     プロフィール作成ページ
   </div>
-  <%= form_with model: [@planner, @profile], local: true do |f| %>
+  <%= form_with url: planner_profiles_path, local: true do |f| %>
     <%= f.file_field :images, class: "image-profile", name: 'profile[images][]', id: "profile_image" %>
     <div id="image-list"></div>
     <%= f.text_field :last_name, class: "last-name-profile", placeholder: "姓"%>
