@@ -6,7 +6,8 @@ class ProfilesController < ApplicationController
   end
 
   def create
-    profile = Profile.create(profile_params.merge(planner_id: current_planner.id))
+    binding.pry
+    profile = current_planner.build_profile(profile_params)
     if profile.save
       redirect_to profile_path(current_planner)
     else
